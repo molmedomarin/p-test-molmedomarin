@@ -51,7 +51,7 @@
 		<dependency>
 			<groupId>f410b1b4-6203-4154-a14a-d77dd6823489</groupId>
 			<artifactId>p-test-molmedomarin</artifactId>
-			<version>1.0.3</version>
+			<version>1.0.0</version>
 			<classifier>raml</classifier>
 			<type>zip</type>
 		</dependency>
