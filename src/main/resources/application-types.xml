@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="accounts" format="json">
+      <types:shape format="weave" example="examples/accounts-example.json"><![CDATA[%dw 2.0
+
+type accounts = Array<{|  Industry: String,   Description: String,   BillingStreet: String,   Id: String,   "type": String,   Name: String,   AccountNumber: String|}> {"example": "[{\\\"Industry\\\":\\\"Energy\\\",\\\"Description\\\":\\\"World's third largest oil and gas company.\\\",\\\"BillingStreet\\\":\\\"1301 Avenue of the Americas \\\\nNew York, NY 10019\\\\nUSA\\\",\\\"Id\\\":\\\"0011t000006ubsnAAA\\\",\\\"type\\\":\\\"Account\\\",\\\"Name\\\":\\\"United Oil & Gas Corp.\\\",\\\"AccountNumber\\\":\\\"CD355118\\\"},{\\\"Industry\\\":null,\\\"Description\\\":null,\\\"BillingStreet\\\":\\\"The Landmark @ One Market\\\",\\\"Id\\\":\\\"0011t000006ubstAAA\\\",\\\"type\\\":\\\"Account\\\",\\\"Name\\\":\\\"sForce\\\",\\\"AccountNumber\\\":null}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#08d94460-7e3e-4a7f-9df2-f2dcce2984c7">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="accounts"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
