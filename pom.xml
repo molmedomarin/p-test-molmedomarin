@@ -29,7 +29,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<classifier>---- select project type ----</classifier>
+					<classifier>cloudhub</classifier>
 				</configuration>
 			</plugin>
 		</plugins>
