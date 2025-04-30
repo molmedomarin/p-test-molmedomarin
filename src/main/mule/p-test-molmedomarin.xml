@@ -121,6 +121,7 @@ output application/json
         </error-handler>
     </flow>
     <flow name="get:\accounts:p-test-molmedomarin-config">
+		<http:listener doc:name="Listener" doc:id="df26097e-3d99-471c-a0d6-1a11d270a2f0" config-ref="p-test-molmedomarin-httpListenerConfig" path="/accounts" allowedMethods="GET"/>
 		<http:request method="GET" doc:name="Request Contacts" doc:id="f3ffb154-fc28-4180-9a52-5f1a475858f3" config-ref="HTTP_Request_configuration" path="/api/contacts" target="contacts">
 			<http:headers ><![CDATA[#[output application/java
 ---
